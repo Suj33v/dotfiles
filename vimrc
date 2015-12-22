@@ -1,3 +1,6 @@
+" Run pathogen
+execute pathogen#infect()
+
 if has("gui_running")
   set lines=40 columns=130
   " any code here affects gvim but not console vim
@@ -41,6 +44,9 @@ set tabstop=2
 
 " Switch on syntax highlighting
 syntax enable
+
+" Use darcula theme
+colorscheme darcula
 
 " Hide toolbar
 set guioptions-=T
