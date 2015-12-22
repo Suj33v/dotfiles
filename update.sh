@@ -1,10 +1,12 @@
 #!/bin/bash
 
+BASE_DIR=$PWD
+
 # Update pathogen submodule
 cd vim-pathogen
 echo "updating pathogen."
 git pull
-cd ..
+cd $BASE_DIR
 
 # Install pathogen
 mkdir -p .vim .vim/autoload .vim/bundle
@@ -15,4 +17,10 @@ echo "copied pathogen.vim."
 cd .vim/bundle/darcula
 echo "updating darcula."
 git pull
-cd ..
+cd $BASE_DIR
+
+# Update nerdcommenter
+cd .vim/bundle/nerdcommenter
+echo "updating nerdcommenter."
+git pull
+cd $BASE_DIR

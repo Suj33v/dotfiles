@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/darcula"]
 	path = .vim/bundle/darcula
 	url = https://github.com/blueshirts/darcula.git
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git

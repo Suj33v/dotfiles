@@ -8,6 +8,15 @@ else
   " any code here affects console vim but not gvim
 endif
 
+" Switch on syntax highlighting
+syntax enable
+
+" Use darcula theme
+colorscheme darcula
+
+" To use nerdcommenter
+filetype plugin on
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -41,12 +50,6 @@ set smartindent
 
 " 1 tab = 2 spaces
 set tabstop=2
-
-" Switch on syntax highlighting
-syntax enable
-
-" Use darcula theme
-colorscheme darcula
 
 " Hide toolbar
 set guioptions-=T
