@@ -24,3 +24,9 @@ cd .vim/bundle/nerdcommenter
 echo "updating nerdcommenter."
 git pull
 cd $BASE_DIR
+
+# Update syntastic
+cd .vim/bundle/syntastic
+echo "updating syntastic."
+git pull
+cd $BASE_DIR

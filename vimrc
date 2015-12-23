@@ -8,13 +8,8 @@ else
   " any code here affects console vim but not gvim
 endif
 
-" Switch on syntax highlighting
-syntax enable
 
-" Use darcula theme
-colorscheme darcula
-
-" To use nerdcommenter
+" To use plugins from bundle
 filetype plugin on
 
 " Configure backspace so it acts as it should act
@@ -53,6 +48,13 @@ set tabstop=2
 
 " Hide toolbar
 set guioptions-=T
+
+" Switch on syntax highlighting
+syntax enable
+
+" Use darcula theme
+colorscheme darcula
+
 
 "================== Scratch Edit =============================================={{{
 function! ScratchEdit(cmd, options)
