@@ -55,6 +55,9 @@ syntax enable
 " Use darcula theme
 colorscheme darcula
 
+" Automatically start with NERDTree
+autocmd VimEnter * NERDTree
+
 
 "================== Scratch Edit =============================================={{{
 function! ScratchEdit(cmd, options)
