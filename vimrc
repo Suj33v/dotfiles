@@ -49,6 +49,9 @@ set tabstop=2
 " Hide toolbar
 set guioptions-=T
 
+" Mark max recommended width
+set colorcolumn=80
+
 " Switch on syntax highlighting
 syntax enable
 
