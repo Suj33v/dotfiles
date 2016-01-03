@@ -69,6 +69,10 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$'
   \ }
 
+" Disabling markdown folding
+let g:vim_markdown_folding_disabled=1
+set nofoldenable
+
 "================== Scratch Edit =============================================={{{
 function! ScratchEdit(cmd, options)
   exe a:cmd tempname()
