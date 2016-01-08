@@ -73,6 +73,17 @@ let g:ctrlp_custom_ignore = {
 let g:vim_markdown_folding_disabled=1
 set nofoldenable
 
+" Highlight trailing whitespace
+match ErrorMsg '\s\+$'
+
+
+" Removes trailing spaces
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
+
 "================== Scratch Edit =============================================={{{
 function! ScratchEdit(cmd, options)
   exe a:cmd tempname()
