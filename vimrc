@@ -58,8 +58,21 @@ syntax enable
 " Use darcula theme
 colorscheme darcula
 
+
+"================== NERDTree commands ======================================{{{
+
+" NERDTree commands
+
 " Automatically start with NERDTree
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
+
+" Start NERDTree with ctrl+n
+map <C-n> :NERDTreeToggle<CR>
+
+" Close vim if only buffer left open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"===========================================================================}}}
 
 " CtrlP ignores
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -84,13 +97,13 @@ endfunction
 
 nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 
-"================== Scratch Edit =============================================={{{
+"================== Scratch Edit ==========================================={{{
 function! ScratchEdit(cmd, options)
   exe a:cmd tempname()
   setl buftype=nofile bufhidden=wipe nobuflisted
   if !empty(a:options) | exe 'setl' a:options | endif
 endfunction
-"==============================================================================}}}
+"===========================================================================}}}
 
 function! CaptureOutFun(cmd, scratch)
   let old_more=&more
