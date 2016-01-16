@@ -62,6 +62,10 @@ colorscheme darcula
 let g:vim_markdown_folding_disabled=1
 set nofoldenable
 
+" No modeline processing please
+set modelines=0
+set nomodeline
+
 "================== NERDTree commands ======================================{{{
 
 " NERDTree commands
