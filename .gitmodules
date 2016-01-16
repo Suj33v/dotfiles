@@ -1,6 +1,3 @@
-[submodule "vim-pathogen"]
-	path = vim-pathogen
-  url = https://github.com/tpope/vim-pathogen.git
 [submodule "vim/bundle/darcula"]
 	path = vim/bundle/darcula
 	url = https://github.com/blueshirts/darcula.git
@@ -34,3 +31,6 @@
 [submodule "vim/bundle/scratch"]
 	path = vim/bundle/scratch
 	url = https://github.com/mtth/scratch.vim
+[submodule "vim/bundle/vim-pathogen"]
+	path = vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
