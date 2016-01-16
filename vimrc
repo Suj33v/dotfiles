@@ -8,7 +8,6 @@ else
   " any code here affects console vim but not gvim
 endif
 
-
 " To use plugins from bundle
 filetype plugin on
 
@@ -58,6 +57,9 @@ syntax enable
 " Use darcula theme
 colorscheme darcula
 
+" Disabling markdown folding
+let g:vim_markdown_folding_disabled=1
+set nofoldenable
 
 "================== NERDTree commands ======================================{{{
 
@@ -70,9 +72,12 @@ colorscheme darcula
 map <C-n> :NERDTreeToggle<CR>
 
 " Close vim if only buffer left open is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+  \ && b:NERDTree.isTabTree()) | q | endif
 
 "===========================================================================}}}
+
+"================== CtrlP settings ========================================={{{
 
 " CtrlP ignores
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -82,9 +87,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$'
   \ }
 
-" Disabling markdown folding
-let g:vim_markdown_folding_disabled=1
-set nofoldenable
+"================== Handling whitspace ====================================={{{
 
 " Highlight trailing whitespace
 match ErrorMsg '\s\+$'
@@ -97,6 +100,7 @@ endfunction
 
 nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 
+"===========================================================================}}}
 
 "================== Neocomplete commands ==================================={{{
 
@@ -114,5 +118,17 @@ let g:neocomplete#sources#syntax#min_keyword_length = 2
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Make neocomplete use jedi-vim for omni completion in python files.
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+let g:neocomplete#force_omni_input_patterns.python =
+  \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+" alternative pattern: '\h\w*\|[^. \t]\.\w*'
