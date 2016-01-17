@@ -1,5 +1,20 @@
 # dotvim
-Config files and plugins for vim.
+
+This repo contains my config files and plugins for vim. To use them, copy
+`vimrc` to `.vimrc` (Mac/Ubuntu) or `_vimrc` (Windows). Also copy the names of
+the `vim` folder to `.vim` (Mac/Ubuntu) or `vimfiles` (Windows). Most of the
+plugins can be used as-is except for:
+
+- neocomplete: requires vim to be compiled with `+lua`.
+
+- jedi-vim: requires vim to be compiled with `+python` or `+python3`.
+
+- syntastic: requires `JShint` to be installed as a global node module using
+  NodeJS for javascript files. This is not a necessity, as it just doesn't do
+  any checking in javascript files if JShint is not isntalled.
+
+The best way to do this is to build vim from source. If that can't be done,
+just remove the neocomplete and jedi-vim folders from the bundle directory.
 
 ## Helpful hints
 
