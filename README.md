@@ -17,3 +17,6 @@ Config files and plugins for vim.
 - Open scratch pad: `gs`. If something is selected, `gs` will copy it into the
   pad.
 
+- Increase date by increasing number under cursor: `ctrl-A`.
+
+- Decrease date by decreasing number under cursor: `ctrl-X`.
