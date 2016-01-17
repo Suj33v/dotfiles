@@ -47,3 +47,6 @@ just remove the neocomplete and jedi-vim folders from the bundle directory.
 - Decrease date by decreasing number under cursor: `ctrl-X`.
 
 - Toggle indent visualization: `\ig`.
+
+- Commenting with tcomment: `gc`. This is an action and can be applied on any
+  motion.
