@@ -1,4 +1,4 @@
- dotvim
+## dotvim
 
 This repo contains my config files and plugins for vim. To use them, copy
 `vimrc` to `.vimrc` (Mac/Ubuntu) or `_vimrc` (Windows). Also copy the names of
