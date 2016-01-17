@@ -56,7 +56,11 @@ set colorcolumn=80
 syntax enable
 
 " Use darcula theme
-colorscheme darcula
+" colorscheme darcula
+
+" Use solarized
+set background=dark
+colorscheme solarized
 
 " Disabling markdown folding
 let g:vim_markdown_folding_disabled=1
