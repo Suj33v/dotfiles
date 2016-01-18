@@ -11,7 +11,10 @@ plugins can be used as-is except for:
 
 - syntastic: requires `JShint` to be installed as a global node module using
   NodeJS for javascript files. This is not a necessity, as it just doesn't do
-  any checking in javascript files if JShint is not isntalled.
+  any checking in javascript files if JShint is not installed.
+
+- vim-signature: requires vim to be compiled with `+signs` (this was done by
+  default and did not require any recompilation on a mac).
 
 The best way to do this is to build vim from source. If that can't be done,
 just remove the neocomplete and jedi-vim folders from the bundle directory.
