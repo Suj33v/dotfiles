@@ -50,3 +50,5 @@ just remove the neocomplete and jedi-vim folders from the bundle directory.
 
 - Commenting with tcomment: `gc`. This is an action and can be applied on any
   motion.
+
+- Delete all marks with `m<space>` (thanks to vim-signature).
