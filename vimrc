@@ -3,7 +3,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 if has("gui_running")
-  set lines=40 columns=130
+  set lines=50 columns=165
   " any code here affects gvim but not console vim
 else
   " any code here affects console vim but not gvim
@@ -51,6 +51,9 @@ set guioptions-=T
 
 " Mark max recommended width
 set colorcolumn=80
+
+" Show line number of every line
+set number
 
 " Switch on syntax highlighting
 syntax enable
