@@ -73,6 +73,13 @@ set nofoldenable
 set modelines=0
 set nomodeline
 
+" Make syntastic ignore angular's proprietary errors
+let g:syntastic_html_tidy_ignore_errors=[
+  \"trimming empty <i>",
+  \"trimming empty <span>",
+  \"proprietary attribute \"ng-"
+\]
+
 "================== NERDTree commands ======================================{{{
 
 " NERDTree commands
