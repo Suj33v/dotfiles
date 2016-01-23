@@ -79,6 +79,9 @@ set ls=2
 " Command to open vimrc
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
+" Command to delete all marks
+:nnoremap <leader>dm :delmarks! | delmarks A-Z0-9<CR>
+
 " Make syntastic ignore angular's proprietary errors
 let g:syntastic_html_tidy_ignore_errors=[
   \"trimming empty <i>",
