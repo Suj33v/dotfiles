@@ -73,6 +73,9 @@ set nofoldenable
 set modelines=0
 set nomodeline
 
+" Show status line
+set ls=2
+
 " Command to open vimrc
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
