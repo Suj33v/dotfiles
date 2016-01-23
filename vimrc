@@ -73,6 +73,9 @@ set nofoldenable
 set modelines=0
 set nomodeline
 
+" Command to open vimrc
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
 " Make syntastic ignore angular's proprietary errors
 let g:syntastic_html_tidy_ignore_errors=[
   \"trimming empty <i>",
