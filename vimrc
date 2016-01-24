@@ -70,10 +70,13 @@ set nomodeline
 set ls=2
 
 " Command to open vimrc
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Command to delete all marks
-:map <leader>dm :delmarks! | delmarks A-Z0-9
+nnoremap <leader>dm  :delmarks a-zA-Z0-9<cr>
+
+" Map local leader (mainly for vimtex)
+let maplocalleader = "\\"
 
 " Make syntastic ignore angular's proprietary errors
 let g:syntastic_html_tidy_ignore_errors=[
@@ -81,6 +84,9 @@ let g:syntastic_html_tidy_ignore_errors=[
   \"trimming empty <span>",
   \"proprietary attribute \"ng-"
 \]
+
+" Toggle background (useful only with solarized)
+call togglebg#map("<F5>")
 
 if has("gui_running")
   " any code here affects gvim but not console vim
