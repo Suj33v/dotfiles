@@ -2,13 +2,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-if has("gui_running")
-  set lines=50 columns=165
-  " any code here affects gvim but not console vim
-else
-  " any code here affects console vim but not gvim
-endif
-
 " To use plugins from bundle
 filetype plugin on
 
@@ -80,7 +73,7 @@ set ls=2
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Command to delete all marks
-:nnoremap <leader>dm :delmarks! | delmarks A-Z0-9<CR>
+:map <leader>dm :delmarks! | delmarks A-Z0-9
 
 " Make syntastic ignore angular's proprietary errors
 let g:syntastic_html_tidy_ignore_errors=[
@@ -88,6 +81,16 @@ let g:syntastic_html_tidy_ignore_errors=[
   \"trimming empty <span>",
   \"proprietary attribute \"ng-"
 \]
+
+if has("gui_running")
+  " any code here affects gvim but not console vim
+  set lines=50 columns=165
+
+  set guifont=Terminus:h12
+else
+  " any code here affects console vim but not gvim
+endif
+
 
 "================== NERDTree commands ======================================{{{
 
@@ -147,3 +150,4 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType python setlocal omnifunc=python3complete#Complete
