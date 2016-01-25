@@ -75,7 +75,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " Command to delete all marks
 nnoremap <leader>dm  :delmarks a-zA-Z0-9<cr>
 
-" Map local leader (mainly for vimtex)
+" Map local leader
 let maplocalleader = "\\"
 
 " Make syntastic ignore angular's proprietary errors
@@ -157,3 +157,13 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType python setlocal omnifunc=python3complete#Complete
+
+"===========================================================================}}}
+
+"================== Vimtex commands ========================================{{{
+
+let g:vimtex_latexmk_continuous = 1
+
+"===========================================================================}}}
+
+
