@@ -97,6 +97,8 @@ else
   " any code here affects console vim but not gvim
 endif
 
+nnoremap <C-t> :TagbarToggle<CR>
+
 
 "================== NERDTree commands ======================================{{{
 
@@ -106,7 +108,7 @@ endif
 " autocmd VimEnter * NERDTree
 
 " Start NERDTree with ctrl+n
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Close vim if only buffer left open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
