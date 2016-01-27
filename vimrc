@@ -97,9 +97,6 @@ else
   " any code here affects console vim but not gvim
 endif
 
-" Toggle tagbar
-nnoremap <C-t> :TagbarToggle<CR>
-
 " Intuitive split opening
 " <C-> mappings are not case-sensitive. So don't have to worry.
 nnoremap <C-J> <C-W><C-J>
@@ -109,6 +106,20 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+" Varaible for windows specific settings
+let g:is_win = has('win32') || has('win64')
+
+"================== Tagbar commands ======================================={{{
+
+" Toggle tagbar
+nnoremap <C-t> :TagbarToggle<CR>
+
+" Help tagbar find ctags.exe
+if g:is_win
+  let g:tagbar_ctags_bin=expand(globpath('~', 'ctags58')).'\ctags.exe'
+endif
+
+"===========================================================================}}}
 
 "================== NERDTree commands ======================================{{{
 
