@@ -78,13 +78,6 @@ nnoremap <leader>dm  :delmarks a-zA-Z0-9<cr>
 " Map local leader
 let maplocalleader = "\\"
 
-" Make syntastic ignore angular's proprietary errors
-let g:syntastic_html_tidy_ignore_errors=[
-  \"trimming empty <i>",
-  \"trimming empty <span>",
-  \"proprietary attribute \"ng-"
-\]
-
 " Toggle background (useful only with solarized)
 call togglebg#map("<F5>")
 
@@ -118,6 +111,21 @@ nnoremap <C-t> :TagbarToggle<CR>
 if g:is_win
   let g:tagbar_ctags_bin=expand(globpath('~', 'ctags58')).'\ctags.exe'
 endif
+
+"===========================================================================}}}
+
+"================== Syntastic commands ====================================={{{
+
+" Make syntastic ignore angular's proprietary errors
+let g:syntastic_html_tidy_ignore_errors=[
+  \"trimming empty <i>",
+  \"trimming empty <span>",
+  \"proprietary attribute \"ng-"
+\]
+
+" Make syntastic understand C++11
+let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libC++'
 
 "===========================================================================}}}
 
