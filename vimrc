@@ -187,7 +187,13 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType python setlocal omnifunc=python3complete#Complete
+
+if g:is_win
+  autocmd FileType python setlocal omnifunc=python3complete#Complete
+else
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+endif
+
 
 "===========================================================================}}}
 
