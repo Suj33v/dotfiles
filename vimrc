@@ -99,7 +99,10 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-" Varaible for windows specific settings
+" Disable auto-commenting when starting a new line from a commented line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Variable for windows specific settings
 let g:is_win = has('win32') || has('win64')
 
 "================== Tagbar commands ======================================={{{
