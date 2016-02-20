@@ -43,7 +43,7 @@ set tabstop=2
 set guioptions-=T
 
 " Mark max recommended width
-set colorcolumn=80
+set colorcolumn=101
 
 " Show line number of every line
 set number
