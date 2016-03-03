@@ -5,6 +5,9 @@ execute pathogen#infect()
 " To use plugins from bundle
 filetype plugin on
 
+" Variable for windows specific settings
+let g:is_win = has('win32') || has('win64')
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -85,7 +88,9 @@ if has("gui_running")
   " any code here affects gvim but not console vim
   set lines=50 columns=165
 
-  set guifont=Terminus:h12
+  if g:is_win
+    set guifont=Terminus:h12
+  endif
 else
   " any code here affects console vim but not gvim
 endif
@@ -101,9 +106,6 @@ set splitright
 
 " Disable auto-commenting when starting a new line from a commented line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Variable for windows specific settings
-let g:is_win = has('win32') || has('win64')
 
 "================== Tagbar commands ======================================={{{
 
