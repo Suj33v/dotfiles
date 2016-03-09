@@ -12,6 +12,9 @@ let g:is_win = has('win32') || has('win64')
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Show currently typed command
+set showcmd
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -50,6 +53,7 @@ set colorcolumn=101
 
 " Show line number of every line
 set number
+set relativenumber
 
 " Switch on syntax highlighting
 syntax enable
