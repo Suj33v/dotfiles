@@ -42,8 +42,8 @@ set noswapfile
 " Always show current position
 set ruler
 
-" 2 space indentation
-set shiftwidth=2
+" 4 space indentation
+set shiftwidth=4
 
 " When searching try to be smart about cases
 set smartcase
