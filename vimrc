@@ -1,5 +1,13 @@
 " Run pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+" disable unwanted plugins by adding their names as strings to this list
+" example:
+" let g:pathogen_disabled = []
+" let g:pathogen_disabled += ['darcula', 'delimitMate']
+let g:pathogen_disabled = []
+let g:pathogen_disabled += ['delimitMate']
+
 execute pathogen#infect()
 
 " To use plugins from bundle
@@ -110,6 +118,9 @@ set splitright
 
 " Disable auto-commenting when starting a new line from a commented line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" configure auto-indentation of braces for C/C++ files
+autocmd Filetype c,cpp inoremap { {<CR><BS>}<Esc>ko<Tab>
 
 "================== Tagbar commands ======================================={{{
 
