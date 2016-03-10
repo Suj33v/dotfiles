@@ -50,8 +50,8 @@ set smartcase
 
 set smartindent
 
-" 1 tab = 2 spaces
-set tabstop=2
+" 1 tab = 4 spaces
+set tabstop=4
 
 " Hide toolbar
 set guioptions-=T
@@ -120,7 +120,7 @@ set splitright
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " configure auto-indentation of braces for C/C++ files
-autocmd Filetype c,cpp inoremap { {<CR><BS>}<Esc>ko<Tab>
+" autocmd Filetype c,cpp inoremap { {<CR><BS><BS>}<Esc>ko<Tab>
 
 "================== Tagbar commands ======================================={{{
 
