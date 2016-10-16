@@ -56,9 +56,6 @@ set tabstop=4
 " Hide toolbar
 set guioptions-=T
 
-" Mark max recommended width
-set colorcolumn=101
-
 " Show line number of every line
 set number
 set relativenumber
@@ -70,8 +67,10 @@ syntax enable
 " colorscheme darcula
 
 " Use solarized
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
+
+colorscheme slate
 
 " Disabling markdown folding
 let g:vim_markdown_folding_disabled=1
@@ -223,4 +222,11 @@ let g:vimtex_latexmk_continuous = 1
 
 "===========================================================================}}}
 
-
+" Mark max recommended width
+" set colorcolumn=101
+" augroup vimrc_autocmds
+"   autocmd BufEnter * highlight OverLength ctermbg=darkred ctermfg=white guibg=darkred
+"   autocmd BufEnter * match OverLength /\%75v.*/
+" augroup END
+highlight ColorColumn ctermbg=darkred guibg=darkred
+call matchadd('ColorColumn', '\%101v', 100)
