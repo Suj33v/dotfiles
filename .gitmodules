@@ -76,3 +76,6 @@
 [submodule "vim/bundle/vim-hy"]
 	path = vim/bundle/vim-hy
 	url = https://github.com/hylang/vim-hy
+[submodule "vim/bundle/pony-vim-syntax"]
+	path = vim/bundle/pony-vim-syntax
+	url = https://github.com/dleonard0/pony-vim-syntax
