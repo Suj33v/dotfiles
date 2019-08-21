@@ -1,5 +1,9 @@
 " Run pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+if isdirectory($HOME . "/vimfiles")
+    source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
+else
+    source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
+endif
 
 " disable unwanted plugins by adding their names as strings to this list
 " example:
@@ -70,6 +74,9 @@ syntax enable
 " set background=dark
 " colorscheme solarized
 
+" Toggle background (useful only with solarized)
+" call togglebg#map("<F5>")
+
 colorscheme slate
 
 " Disabling markdown folding
@@ -91,9 +98,6 @@ nnoremap <leader>dm  :delmarks a-zA-Z0-9<cr>
 
 " Map local leader
 let maplocalleader = "\\"
-
-" Toggle background (useful only with solarized)
-call togglebg#map("<F5>")
 
 if has("gui_running")
   " any code here affects gvim but not console vim
