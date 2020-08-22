@@ -226,6 +226,7 @@ autocmd FileType python setlocal omnifunc=python3complete#Complete
 
 "================== Vimtex commands ========================================{{{
 
+let g:tex_flavor = "latex"
 let g:vimtex_latexmk_continuous = 1
 
 "===========================================================================}}}
